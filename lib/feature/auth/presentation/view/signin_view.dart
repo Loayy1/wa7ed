@@ -5,6 +5,7 @@ import 'package:wa7ed/core/custom_widget/bg_view.dart';
 import 'package:wa7ed/feature/auth/presentation/cubit/signin_cubit.dart';
 import 'package:wa7ed/feature/auth/presentation/states/signin_states.dart';
 import 'package:wa7ed/feature/auth/presentation/view/login_view.dart';
+import 'package:wa7ed/feature/auth/presentation/view/verify_view.dart';
 
 import '../../../../core/custom_widget/custom_password_field.dart';
 import '../../../../core/custom_widget/custom_text_field.dart';
@@ -236,7 +237,7 @@ class _SignInViewState extends State<SignInView> {
                                                 .isEmpty
                                         ? null
                                         : () {
-                                            goTo(page: const LoginView());
+                                            goTo(page: const VerifyView());
                                           },
                                 style: TextButton.styleFrom(
                                   backgroundColor: Colors.black,
