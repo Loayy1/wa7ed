@@ -151,7 +151,7 @@ class VerifyView extends StatelessWidget {
                       height: 48,
                       width: double.infinity,
                       child: ElevatedButton(
-                        onPressed: () {},
+                        onPressed: cubit.otpCode.length < 6 ? null:() {},
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Colors.black,
                           foregroundColor: Colors.white,

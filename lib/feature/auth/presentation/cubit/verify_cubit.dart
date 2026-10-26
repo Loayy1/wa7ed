@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:wa7ed/feature/auth/presentation/states/verify_states.dart';
 
@@ -9,6 +10,8 @@ class VerifyCubit extends Cubit<VerifyStates> {
   Timer? timer;
   int seconds = 30;
   bool get canResend => seconds == 0;
+  final List<TextEditingController>codeController = List.generate(6, (index) => TextEditingController(),);
+  String get otpCode=>codeController.map((e) => e.text,).join();
 
   void startTimer() {
     timer?.cancel();
