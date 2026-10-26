@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:wa7ed/core/logic/helper_methods.dart';
 import 'package:wa7ed/feature/auth/presentation/view/signin_view.dart';
 
@@ -111,7 +112,7 @@ class VerifyView extends StatelessWidget {
                             cubit.seconds.toString().padLeft(2, '0');
 
                         if (cubit.canResend) {
-                          return TextButton(
+                          return TextButton.icon(
                             onPressed: () {
                               cubit.startTimer();
                             },
@@ -121,12 +122,14 @@ class VerifyView extends StatelessWidget {
                               minimumSize: Size.zero,
                               tapTargetSize: MaterialTapTargetSize.shrinkWrap,
                             ),
-                            child: const Text(
+                            icon: SvgPicture.asset("assets/icons/resend.svg",fit: BoxFit.scaleDown,),
+                            label: const Text(
                               "إعادة إرسال الرمز",
                               style: TextStyle(
                                 fontSize: 14,
                                 fontWeight: FontWeight.w600,
                                 color: Colors.black,
+                                decoration: TextDecoration.underline,
                               ),
                             ),
                           );
