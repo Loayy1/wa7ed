@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
 import 'core/logic/helper_methods.dart';
+import 'feature/auth/presentation/view/forget_password.dart';
 import 'feature/auth/presentation/view/verify_view.dart';
 
 void main() {
@@ -10,7 +11,7 @@ void main() {
       title: "Wa7ed",
       navigatorKey: navKey,
       debugShowCheckedModeBanner: false,
-      home: VerifyView(),
+      home: ForgetPasswordView(),
       theme: ThemeData(
         fontFamily: "IBMPlexSansArabic",
         scaffoldBackgroundColor: Color(0xffFFFFFF),
